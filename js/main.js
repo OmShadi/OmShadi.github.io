@@ -120,7 +120,7 @@ document.getElementById('contactForm').addEventListener('submit', function(event
 
     // Prepare the email parameters
     const templateParams = {
-        to_name: "Nizam",
+        to_name: "Alfayiz Teacher",
         from_name: name,
         from_email: email,
         number: number,
