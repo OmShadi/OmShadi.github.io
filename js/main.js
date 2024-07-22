@@ -114,16 +114,18 @@ document.getElementById('contactForm').addEventListener('submit', function(event
     // Collect form data
     const name = document.getElementById('name').value;
     const email = document.getElementById('email').value;
-    const subject = document.getElementById('subject').value;
+    const number = document.getElementById('number').value;
     const message = document.getElementById('message').value;
+    const grade = document.getElementById('grade').value;
 
     // Prepare the email parameters
     const templateParams = {
         to_name: "Nizam",
         from_name: name,
         from_email: email,
-        title: subject,
-        message: message
+        number: number,
+        message: message,
+        grade: grade
     };
 
     // Send the email using EmailJS
