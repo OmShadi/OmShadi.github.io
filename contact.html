@@ -137,7 +137,7 @@
                         tabindex="0"></iframe>
                 </div>
                 <div class="col-lg-4 col-md-12 wow fadeInUp" data-wow-delay="0.5s">
-                    <form>
+                    <form id="contactForm">
                         <div class="row g-3">
                             <div class="col-md-6">
                                 <div class="form-floating">
@@ -188,7 +188,7 @@
                     <a class="btn btn-link" href="contact.html">المساعدة</a>
                 </div>
                 <div class="col-lg-3 col-md-6">
-                    <h4 class="text-white mb-3">للتواصل</h4>
+                    <h4 class="text-white mb-3">للتواصل هنا</h4>
                     <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>الخليل - فلسطين</p>
                     <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+970 597 289-669</p>
                     <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@example.com</p>
@@ -265,8 +265,14 @@
     <script src="lib/easing/easing.min.js"></script>
     <script src="lib/waypoints/waypoints.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
 
     <!-- Template Javascript -->
+    <script type="text/javascript">
+        (function() {
+            emailjs.init("co-oo7lGZcncpWZUV");
+        })();
+    </script>
     <script src="js/main.js"></script>
 </body>
 

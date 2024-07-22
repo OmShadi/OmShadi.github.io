@@ -107,3 +107,32 @@
     
 })(jQuery);
 
+
+document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent the default form submission
+
+    // Collect form data
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const subject = document.getElementById('subject').value;
+    const message = document.getElementById('message').value;
+
+    // Prepare the email parameters
+    const templateParams = {
+        to_name: "Nizam",
+        from_name: name,
+        from_email: email,
+        title: subject,
+        message: message
+    };
+
+    // Send the email using EmailJS
+    emailjs.send("service_w5ts0qg","template_362qflo", templateParams)
+    .then(function(response) {
+        console.log('Email sent successfully!', response.status, response.text);
+        alert('Email sent successfully!');
+    }, function(error) {
+        console.error('Failed to send email:', error);
+        alert('Failed to send email.');
+    });
+});
