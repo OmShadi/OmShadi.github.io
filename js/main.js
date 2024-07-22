@@ -138,3 +138,5 @@ document.getElementById('contactForm').addEventListener('submit', function(event
         alert('Failed to send email.');
     });
 });
+
+{/* <p style="padding: 12px; border-left: 4px solid #d0d0d0; font-style: italic;">{{message}}</p> */}
