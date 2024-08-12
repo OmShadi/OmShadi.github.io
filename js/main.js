@@ -132,7 +132,7 @@ document.getElementById('contactForm').addEventListener('submit', function(event
     emailjs.send("service_w5ts0qg","template_362qflo", templateParams)
     .then(function(response) {
         console.log('Email sent successfully!', response.status, response.text);
-        alert('Email sent successfully!');
+        location.reload();
     }, function(error) {
         console.error('Failed to send email:', error);
         alert('Failed to send email.');
