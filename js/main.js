@@ -131,27 +131,27 @@ document.getElementById('contactForm').addEventListener('submit', function(event
     // Send the email using EmailJS
     emailjs.send("service_w5ts0qg","template_362qflo", templateParams)
     .then(function(response) {
-        // console.log('Email sent successfully!', response.status, response.text);
-        // alert('email sent successfully.');
-        // setTimeout(() => {
-        //     location.reload()
-        // }, 2000);
-
-        const notification = document.createElement('div');
-        notification.innerText = 'Email sent successfully!', response.text;
-        notification.style.position = 'fixed';
-        notification.style.bottom = '10px';
-        notification.style.right = '10px';
-        notification.style.backgroundColor = '#28a745';
-        notification.style.color = '#fff';
-        notification.style.padding = '10px';
-        notification.style.borderRadius = '5px';
-        document.body.appendChild(notification);
-
+        console.log('Email sent successfully!', response.status, response.text);
+        alert('email sent successfully.');
         setTimeout(() => {
-            notification.remove();
-            location.reload();
+            location.reload()
         }, 2000);
+
+        // const notification = document.createElement('div');
+        // notification.innerText = 'Email sent successfully!', response.text;
+        // notification.style.position = 'fixed';
+        // notification.style.bottom = '10px';
+        // notification.style.right = '10px';
+        // notification.style.backgroundColor = '#28a745';
+        // notification.style.color = '#fff';
+        // notification.style.padding = '10px';
+        // notification.style.borderRadius = '5px';
+        // document.body.appendChild(notification);
+
+        // setTimeout(() => {
+        //     notification.remove();
+        //     location.reload();
+        // }, 2000);
     }, function(error) {
         console.error('Failed to send email:', error);
         alert('Failed to send email.');
